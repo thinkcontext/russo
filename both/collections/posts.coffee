@@ -1,11 +1,32 @@
 @Posts = new Meteor.Collection('posts');
 
 Schemas.Posts = new SimpleSchema
+	rating:
+		type:String
+		allowedValues:['passes','does not pass','no rating']
+		label:'Status'
+
 	title:
 		type:String
 		max: 60
 
-	content:
+	year:
+        	type: Number
+        	min: 1890
+        	max: 2020
+
+	urls:
+		type: [Object]
+		label: "Urls"
+
+	"urls.$.url": 
+			type: String
+			regEx: SimpleSchema.RegEx.Url
+			unique: true
+			autoform:
+				type: "url"
+
+	notes:
 		type: String
 		autoform:
 			rows: 5
@@ -23,12 +44,12 @@ Schemas.Posts = new SimpleSchema
 			if this.isUpdate
 				new Date()
 
-	picture:
-		type: String
-		autoform:
-			afFieldInput:
-				type: 'fileUpload'
-				collection: 'Attachments'
+#	picture:
+#		type: String
+#		autoform:
+#			afFieldInput:
+#				type: 'fileUpload'
+#				collection: 'Attachments'
 
 	owner: 
 		type: String

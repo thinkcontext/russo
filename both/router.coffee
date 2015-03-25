@@ -9,11 +9,11 @@ Router.configure
     @next()
 
 Router.map ->
-  @route "home",
-    path: "/"
-    layoutTemplate: "homeLayout"
+#  @route "home",
+#    path: "/"
+#    layoutTemplate: "homeLayout"
   @route "dashboard",
-    path: "/dashboard"
+    path: "/"
     waitOn: ->
       [
         Meteor.subscribe 'posts'
