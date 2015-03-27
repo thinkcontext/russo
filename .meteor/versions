@@ -46,7 +46,7 @@ ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
 email@1.0.6
-facebook@1.1.4
+facebook@1.2.0
 fastclick@1.0.3
 geojson-utils@1.0.3
 google@1.1.5
@@ -87,6 +87,7 @@ mongo-livedata@1.0.8
 mpowaga:string-template@0.1.0
 mquandalle:jade@0.2.7
 mrt:googlemaps@0.0.2
+mrt:jquery-ui@1.9.2
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
 multiply:iron-router-progress@1.0.1

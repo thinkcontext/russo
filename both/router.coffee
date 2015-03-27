@@ -44,7 +44,6 @@ Router.map ->
         @redirect '/dashboard'
       @next()
 
-
 Router.waitOn ->
   Meteor.subscribe 'user'
   Meteor.subscribe 'userPicture'

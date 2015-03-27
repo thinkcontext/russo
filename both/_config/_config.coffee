@@ -1,16 +1,16 @@
 @Config =
-	name: 'The Vito Russo Movie Test'
+	name: 'The Russo Movie Test'
 	title: 'Analyzes the portrayal of LGBT characters in film'
 	subtitle: ''
 	logo: ->
 		'<b>' + @name + '</b>'
-	footer: ->
-		@name + ' - Copyright ' + new Date().getFullYear()
+	#footer: ->
+	#	@name + ' - Copyright ' + new Date().getFullYear()
 	emails:
 		from: 'noreply@' + Meteor.absoluteUrl()
         #blog: 'http://meteorfactory.io'
 	#about: 'http://meteorfactory.io'
-	username: false
+	username: true
 	homeRoute: '/'
 	dashboardRoute: '/dashboard'
 	# socialMedia:
@@ -26,4 +26,5 @@
 	# 	info:
 	# 		url: 'http://meteorfactory.io'
 	# 		icon: 'link'
-	publicRoutes: ['home']
+	publicRoutes: ['home','dashboard']
+	rtKey: Meteor.settings.public.rtKey
